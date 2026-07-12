@@ -1,0 +1,31 @@
+{
+    "name": "Blupe - Orchestrate Any Process in One Workflow",
+    "short_name": "Blupe",
+    "description": "Enterprise-grade OS for AI Agents. Automate workflows with no code.",
+    "icons": [
+        {
+            "src": "/logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#625DF3",
+    "background_color": "#020617",
+    "display": "standalone",
+    "start_url": "/"
+}

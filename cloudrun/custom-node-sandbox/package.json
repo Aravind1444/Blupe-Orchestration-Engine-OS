@@ -1,0 +1,21 @@
+{
+  "name": "blupe-custom-node-sandbox",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.12",
+    "cheerio": "^1.0.0-rc.12",
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.0",
+    "dayjs": "^1.11.11",
+    "express": "^5.1.0",
+    "lodash": "^4.17.21",
+    "uuid": "^9.0.1",
+    "validator": "^13.12.0"
+  }
+}

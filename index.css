@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override React Flow default Input Node styles to remove the "white box" */
+.react-flow__node-input {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    color: inherit !important;
+}
+
+/* Ensure handles don't have default styling if we want custom ones */
+.react-flow__node-input .react-flow__handle {
+    background: #cbd5e1;
+}
+
+/* Remove unwanted React Flow UI elements as per request */
+.react-flow__panel,
+.react-flow__minimap,
+.react-flow__controls {
+    display: none !important;
+}
+
+/* Remove Output Node default styling/behavior */
+.react-flow__node-output {
+    cursor: default !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Override React Flow default node styles to remove white box wrapper */
+.react-flow__node-default {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Markdown Content Styles */
+.markdown-content p {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content strong {
+    font-weight: 600;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="The enterprise-grade OS for AI Agents. Connect to any AI model and automate your workflows with no code. Deploy public forms, run scheduled jobs, and connect securely to your own backend.">
+  <title>Blupe - Automate Any Process in One Workflow</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Blupe",
+  "url": "https://blupe.space",
+  "description": "The enterprise-grade OS for AI Agents. Orchestrate any process in one workflow with no code. Build, automate, and deploy AI-driven workflows.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://blupe.space/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js" crossorigin="anonymous"></script>
+  <!-- Favicons for all platforms -->
+  <link rel="icon" type="image/svg+xml"
+    href="https://ph-files.imgix.net/e4151855-1c05-4018-8151-c59771652365.svg?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=64&h=64&fit=crop&frame=1&dpr=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.11.4/dist/style.css" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blupe.space">
+  <meta property="og:title" content="Blupe - Orchestrate Any Process in One Workflow">
+  <meta property="og:description"
+    content="The enterprise-grade OS for AI Agents. Build no code workflows, integrate any AI model, run scheduled jobs, deploy public forms, and connect securely to your infrastructure.">
+  <meta property="og:image" content="/blupe-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Blupe - Enterprise-grade OS for AI Agents">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://blupe.space">
+  <meta name="twitter:title" content="Blupe • Orchestrate Any Process in One Workflow">
+  <meta name="twitter:description"
+    content="Enterprise-grade OS for AI Agents. Automate workflows with no code and orchestrate any process in one workflow.">
+  <meta name="twitter:image" content="https://blupe.space/og-image.png">
+  <meta name="twitter:image:alt" content="Blupe - Enterprise-grade OS for AI Agents">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Blupe",
+  "url": "https://blupe.space",
+  "logo": "https://blupe.space/logo.svg"
+}
+</script>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "uhd02wuu2l");
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            slate: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+              950: '#1e1b4b',
+            }
+          },
+          animation: {
+            'in': 'fadeIn 0.3s ease-out',
+            'slide-up': 'slideUp 0.4s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      overflow: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* React Flow Overrides */
+    .react-flow__node {
+      border-radius: 12px;
+      border: none;
+    }
+
+    .react-flow__handle {
+      width: 8px;
+      height: 8px;
+      background: #94a3b8;
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s;
+    }
+
+    .react-flow__handle:hover {
+      background: #6366f1;
+      width: 10px;
+      height: 10px;
+      border-color: #6366f1;
+    }
+
+    .react-flow__edge-path {
+      stroke: #94a3b8;
+      stroke-width: 2;
+    }
+
+    .react-flow__connection-path {
+      stroke: #6366f1;
+      stroke-width: 2;
+    }
+
+    .react-flow__controls {
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 4px;
+      color: #475569;
+    }
+
+    .react-flow__controls-button {
+      border: none;
+      background: transparent;
+      fill: #64748b;
+      margin-bottom: 2px;
+      border-radius: 4px;
+    }
+
+    .react-flow__controls-button:hover {
+      background: #f1f5f9;
+      fill: #0f172a;
+    }
+
+    .react-flow__attribution {
+      display: none;
+    }
+
+    .react-flow__panel {
+      margin: 15px;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "reactflow/": "https://aistudiocdn.com/reactflow@^11.11.4/",
+    "reactflow": "https://aistudiocdn.com/reactflow@^11.11.4",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.39.3",
+    "cron-parser": "https://cdn.jsdelivr.net/npm/cron-parser@4.9.0/+esm",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "express": "https://aistudiocdn.com/express@^5.2.1",
+    "resend": "https://aistudiocdn.com/resend@^6.5.2",
+    "dotenv": "https://aistudiocdn.com/dotenv@^17.2.3",
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "nodemailer": "https://aistudiocdn.com/nodemailer@^7.0.11",
+    "razorpay": "https://aistudiocdn.com/razorpay@^2.9.2",
+    "crypto": "https://aistudiocdn.com/crypto@^1.0.1"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

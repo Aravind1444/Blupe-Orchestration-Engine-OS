@@ -1,0 +1,281 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "DB_ENDPOINT,PASSDB,SMTP_USER,SMTP_HOST,SUPABASE_SERVICE_KEY,SUPABASE_URL,SUPABASE_ANON_KEY,VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY,GEMINI_API_KEY,SECRETS_MASTER_KEY"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3001
+  port = 8888
+  autoLaunch = false
+
+[functions]
+  directory = "netlify/functions"
+  # Use esbuild for better Node.js module support
+  node_bundler = "esbuild"
+
+# Redirect API calls to Netlify Functions
+[[redirects]]
+  from = "/api/llm"
+  to = "/.netlify/functions/llm"
+  status = 200
+
+[[redirects]]
+  from = "/api/email"
+  to = "/.netlify/functions/email"
+  status = 200
+
+[[redirects]]
+  from = "/api/health"
+  to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/api/web-search"
+  to = "/.netlify/functions/web-search"
+  status = 200
+
+# Tavily Research Functions
+[[redirects]]
+  from = "/api/deep-research"
+  to = "/.netlify/functions/deep-research"
+  status = 200
+
+[[redirects]]
+  from = "/api/extract-url"
+  to = "/.netlify/functions/extract-url"
+  status = 200
+
+[[redirects]]
+  from = "/api/crawl-site"
+  to = "/.netlify/functions/crawl-site"
+  status = 200
+
+# Agent Functions (Native Gemini Function Calling)
+[[redirects]]
+  from = "/api/agent-functions"
+  to = "/.netlify/functions/agent-functions"
+  status = 200
+
+# MCP Proxy
+[[redirects]]
+  from = "/api/mcp-proxy"
+  to = "/.netlify/functions/mcp-proxy"
+  status = 200
+
+[[redirects]]
+  from = "/api/custom-node-executor"
+  to = "/.netlify/functions/custom-node-executor"
+  status = 200
+
+[[redirects]]
+  from = "/api/run-history"
+  to = "/.netlify/functions/run-history"
+  status = 200
+
+[[redirects]]
+  from = "/api/payment-create-order"
+  to = "/.netlify/functions/payment-create-order"
+  status = 200
+
+[[redirects]]
+  from = "/api/payment-verify"
+  to = "/.netlify/functions/payment-verify"
+  status = 200
+
+[[redirects]]
+  from = "/api/public-flow"
+  to = "/.netlify/functions/public-flow"
+  status = 200
+
+# V2: Public Templates
+[[redirects]]
+  from = "/api/templates"
+  to = "/.netlify/functions/templates"
+  status = 200
+
+# V2: Secrets Envelope Encryption Management
+[[redirects]]
+  from = "/api/secrets"
+  to = "/.netlify/functions/secrets"
+  status = 200
+
+# V2: Secured Resume Endpoint
+[[redirects]]
+  from = "/api/resume-flow"
+  to = "/.netlify/functions/resume-flow"
+  status = 200
+
+# Messaging / payment API proxies (used by client-side executor)
+[[redirects]]
+  from = "/api/telegram-api"
+  to = "/.netlify/functions/telegram-api"
+  status = 200
+
+[[redirects]]
+  from = "/api/discord-api"
+  to = "/.netlify/functions/discord-api"
+  status = 200
+
+[[redirects]]
+  from = "/api/whatsapp-api"
+  to = "/.netlify/functions/whatsapp-api"
+  status = 200
+
+[[redirects]]
+  from = "/api/razorpay-api"
+  to = "/.netlify/functions/razorpay-api"
+  status = 200
+
+# V2: Specific Webhook Trigger Handlers
+[[redirects]]
+  from = "/api/webhook/telegram"
+  to = "/.netlify/functions/telegram-webhook"
+  status = 200
+
+[[redirects]]
+  from = "/api/webhook/discord"
+  to = "/.netlify/functions/discord-webhook"
+  status = 200
+
+[[redirects]]
+  from = "/api/webhook/whatsapp"
+  to = "/.netlify/functions/whatsapp-webhook"
+  status = 200
+
+[[redirects]]
+  from = "/api/webhook/razorpay"
+  to = "/.netlify/functions/razorpay-webhook"
+  status = 200
+
+# V2: Webhook endpoint (wildcard for flowId)
+[[redirects]]
+  from = "/api/webhook/*"
+  to = "/.netlify/functions/webhook"
+  status = 200
+
+# V2: OAuth provider configuration status
+[[redirects]]
+  from = "/api/oauth-status"
+  to = "/.netlify/functions/oauth-status"
+  status = 200
+
+# V2: Google OAuth
+[[redirects]]
+  from = "/api/oauth-token"
+  to = "/.netlify/functions/oauth-token"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-google-init"
+  to = "/.netlify/functions/oauth-google-init"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-google-callback"
+  to = "/.netlify/functions/oauth-google-callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-google-refresh"
+  to = "/.netlify/functions/oauth-google-refresh"
+  status = 200
+
+# V2: Slack OAuth & API Proxy
+[[redirects]]
+  from = "/api/slack-api"
+  to = "/.netlify/functions/slack-api"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-slack-init"
+  to = "/.netlify/functions/oauth-slack-init"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-slack-callback"
+  to = "/.netlify/functions/oauth-slack-callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/stripe-api"
+  to = "/.netlify/functions/stripe-api"
+  status = 200
+
+# V2: HubSpot OAuth
+[[redirects]]
+  from = "/api/oauth-hubspot-init"
+  to = "/.netlify/functions/oauth-hubspot-init"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-hubspot-callback"
+  to = "/.netlify/functions/oauth-hubspot-callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-hubspot-refresh"
+  to = "/.netlify/functions/oauth-hubspot-refresh"
+  status = 200
+
+# V2: Stripe OAuth
+[[redirects]]
+  from = "/api/oauth-stripe-init"
+  to = "/.netlify/functions/oauth-stripe-init"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-stripe-callback"
+  to = "/.netlify/functions/oauth-stripe-callback"
+  status = 200
+
+# V2: Microsoft OAuth
+[[redirects]]
+  from = "/api/oauth-microsoft-init"
+  to = "/.netlify/functions/oauth-microsoft-init"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-microsoft-callback"
+  to = "/.netlify/functions/oauth-microsoft-callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth-microsoft-refresh"
+  to = "/.netlify/functions/oauth-microsoft-refresh"
+  status = 200
+
+# Static assets - serve directly without SPA fallback
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# Favicons and manifest files
+[[redirects]]
+  from = "/*.ico"
+  to = "/:splat.ico"
+  status = 200
+
+[[redirects]]
+  from = "/*.png"
+  to = "/:splat.png"
+  status = 200
+
+[[redirects]]
+  from = "/*.svg"
+  to = "/:splat.svg"
+  status = 200
+
+[[redirects]]
+  from = "/*.webmanifest"
+  to = "/:splat.webmanifest"
+  status = 200
+
+# SPA fallback - serve index.html for all routes (frontend routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
